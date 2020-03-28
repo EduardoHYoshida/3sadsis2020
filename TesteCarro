@@ -1,0 +1,20 @@
+package aula20200327.carro;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TesteCarro {
+
+   @Test
+   void test() {
+     
+	   Carro civic = new Carro();
+	   civic abastecer();
+	   civic ligar();
+	   civic acelerar();
+	   assertEquals(true, civic.isLigado());
+	   
+	   civic.desligar();
+	   assertEquals(false, civic.isDesligado());
+
+   }   
+}
