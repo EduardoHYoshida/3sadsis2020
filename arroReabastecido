@@ -1,0 +1,23 @@
+package aula20200327.carro;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CarroReabastecido {
+
+	@Test
+	void testarCarroReabasteciedo() {
+	
+		Carro sentra = new Carro();
+	   
+		assertTrue(sentra.isDesligado()); 
+		
+		sentra.abastecer(10.00);
+		
+		assertFalse(sentra.isLigado());
+	
+		
+	}
+
+}
