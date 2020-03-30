@@ -1,0 +1,26 @@
+package aula20200327.carro;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestaCarroSemCombustivel {
+
+	@Test
+	void testarSeCarroDesliga() {
+	  Carro civic = new Carro();
+	  
+	  assertTrue(civic.isDesligado());
+	  
+	  civic.abastecer(1.00);
+	  
+	  civic.ligar();
+		assertEquals(0.750, civic.getCombustivelNoTanqueEmLitros());
+		
+	  civic.acelerar();	
+	  civic.acelerar();	
+	  civic.acelerar();	
+	  civic.desligar(); 			
+	}
+
+}
