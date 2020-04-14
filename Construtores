@@ -1,0 +1,49 @@
+package aula20200413.exercicio;
+
+public class avião {
+	private String prefixo;
+	private String modelo;
+	private String fabricante;
+	private int anoDeFabricação;
+	
+	public avião() {
+		anoDeFabricação = 2012;
+	}
+	
+    public avião(String prefixo, String modelo, String fabricante, int anoDeFabricação) {
+    	setPrefixo (prefixo);
+    	setModelo (modelo);
+    	setFabricante (fabricante);
+    	setAnoDeFabricação (anoDeFabricação);
+    }
+    
+    public void setPrefixo(String prefixo) {
+		this.prefixo = prefixo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public void setFabricante(String fabricante) {
+		this.fabricante = fabricante;
+	}
+	public void setAnoDeFabricação(int anoDeFabricação) {
+        if (anoDeFabricação > 1980) {
+			throw new RuntimeException("Avião deve ser aposentado.");
+		}
+		this.anoDeFabricação = anoDeFabricação;
+ 	}
+	
+	public String Prefixo() {
+		return prefixo;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public String getfabricante() {
+		return fabricante;
+	}
+	public int anoDeFabricação() { 
+	     return anoDeFabricação;   
+	}
+    
+}   
